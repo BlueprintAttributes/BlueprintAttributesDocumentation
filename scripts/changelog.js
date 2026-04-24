@@ -46,7 +46,7 @@ console.log('arg', args);
 const output = args['--output'] || path.resolve('pages/docs/changelog.mdx');
 const sinceTag = args['--tag'];
 
-console.log(`Using token "${token}" to fetch release note`);
+console.log(`Using token "${token.slice(0, 4)}..." to fetch release note`);
 console.log(`Using output "${output}" to generate release note`);
 console.log(`---`);
 

@@ -1,0 +1,16 @@
+---
+title: "Pull Request #123"
+description: "Add missing includes and forward declarations for non-unity builds"
+---
+
+import Zoom from 'react-medium-image-zoom'
+
+*[on April 24th, 2026](https://github.com/BlueprintAttributes/BlueprintAttributes/pull/123)*
+
+## Add missing includes and forward declarations for non-unity builds
+
+Fixes non-unity build failures in the BlueprintAttributesEditor module by adding missing explicit includes and forward declarations.
+
+* GBACoreRedirectReferencerHandler.cpp — added explicit #include "Engine/Blueprint.h"
+* IGBAAttributeGlobalHandler.h — added #include "Templates/SharedPointer.h" and forward declarations for FTokenizedMessage and FAssetData
+

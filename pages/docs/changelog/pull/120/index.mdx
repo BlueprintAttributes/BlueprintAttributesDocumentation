@@ -1,0 +1,15 @@
+---
+title: "Pull Request #120"
+description: "Ensure InAttribute pin param is wired in (for 5.6 and higher)"
+---
+
+import Zoom from 'react-medium-image-zoom'
+
+*[on April 22nd, 2026](https://github.com/BlueprintAttributes/BlueprintAttributes/pull/120)*
+
+## Ensure InAttribute pin param is wired in (for 5.6 and higher)
+
+FVector2D was deprecated in favor of FVector2f for `FEdGraphSchemaAction::PerformAction` starting in UE 5.6.
+
+This fix the issue with OnRep function handler were generated without properly wiring in the InAttribute pin parameter.
+
