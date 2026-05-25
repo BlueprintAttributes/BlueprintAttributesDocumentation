@@ -1,13 +1,13 @@
 ---
 title: "Pull Request #122"
-description: "Ensure attributes dropdown filtering handled custom child struct"
+description: "Ensure attributes dropdown filtering handles custom child struct"
 ---
 
 import Zoom from 'react-medium-image-zoom'
 
 *[on April 22nd, 2026](https://github.com/BlueprintAttributes/BlueprintAttributes/pull/122)*
 
-## Ensure attributes dropdown filtering handled custom child struct
+## Ensure attributes dropdown filtering handles custom child struct
 
 Replace string-based `IsValidCPPType(FString)` with `IsValidProperty(FProperty*)` using `FGameplayAttribute::IsGameplayAttributeDataProperty()`. `IsValidCPPType()` is now deprecated.
 

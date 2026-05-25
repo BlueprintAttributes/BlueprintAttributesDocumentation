@@ -1,0 +1,36 @@
+---
+title: "Pull Request #124"
+description: "Expand Exec Calc Blueprint library with new methods"
+---
+
+import Zoom from 'react-medium-image-zoom'
+
+*[on May 23rd, 2026](https://github.com/BlueprintAttributes/BlueprintAttributes/pull/124)*
+
+## Expand Exec Calc Blueprint library with new methods
+
+Expands `UGBAExecutionCalculationBlueprintLibrary` API with additional BP-exposed utility functions, adding 10 new functions, improving existing function signatures, and adding method doc comments.
+
+Fix [#108](https://github.com/BlueprintAttributes/BlueprintAttributes/issues/108), Fix [#111](https://github.com/BlueprintAttributes/BlueprintAttributes/issues/111), Fix [#125](https://github.com/BlueprintAttributes/BlueprintAttributes/issues/125)
+
+* New Blueprint functions:
+  * `GetSourceActor`
+    -`GetTargetActor`
+    -`GetSourceAbilitySystemComponent`
+    -`GetTargetAbilitySystemComponent`
+    -`GetSetByCallerMagnitude`
+    -`GetSetByCallerMagnitudeFromExecParams`
+    -`GetEffectSpecDuration`
+    -`GetEffectSpecPeriod`
+    -`FindCaptureDefinition`
+    -`AttemptCalculateCapturedAttributeWithDefinition`
+* Signature changes: `FGameplayAttribute` parameters changed from pass-by-value to pass-by-const-reference across `AttemptCalculateCapturedAttributeMagnitude`, `AttemptCalculateCapturedAttributeMagnitudeWithBase`, and `AddOutputModifier`
+* Bug fix: `AttemptCalculateCapturedAttributeMagnitudeWithBase` was missing `BlueprintPure` — now correctly exposed as pure
+* Documentation: All functions now have proper doc comments and tooltip in editor
+
+## Screenshots
+
+<img width="1336" height="1109" alt="image" src="https://github.com/user-attachments/assets/26131a8d-fdeb-4b1e-9cbd-dc8394759d9f" />
+
+<img width="2269" height="443" alt="image" src="https://github.com/user-attachments/assets/0ae69cfe-0619-4cbc-a327-1c325e4fa0f3" />
+

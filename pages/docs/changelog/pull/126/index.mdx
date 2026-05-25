@@ -1,0 +1,20 @@
+---
+title: "Pull Request #126"
+description: "Add UE 5.8 compatibility, drop UE 5.3/5.4 support"
+---
+
+import Zoom from 'react-medium-image-zoom'
+
+*[on May 25th, 2026](https://github.com/BlueprintAttributes/BlueprintAttributes/pull/126)*
+
+## Add UE 5.8 compatibility, drop UE 5.3/5.4 support
+
+Raises the minimum supported Unreal Engine version from 5.3 to 5.5 and adds forward compatibility guards for UE 5.8.
+
+`FCoreDelegates::GetOnPostEngineInit()` signature changed in 5.8, wrapped with `UE_VERSION_NEWER_THAN(5,7,-1)`
+in GBAEditorModule and GBADeveloperModule.
+
+***
+
+Includes [#124](https://github.com/BlueprintAttributes/BlueprintAttributes/issues/124), [#127](https://github.com/BlueprintAttributes/BlueprintAttributes/issues/127)
+
